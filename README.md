@@ -385,37 +385,6 @@ All protected endpoints enforce tenant isolation using the authenticated user's 
 | Company/job reference mismatch | `400 Bad Request` |
 | Foreign key/unique violation | structured `409` DB error |
 
-## Screenshots / previews
-
-Mock previews are included in `docs/screenshots/`:
-
-- `swagger-preview.svg`
-- `analytics-preview.svg`
-
-They are intentionally SVG files so GitHub can render them without needing binary screenshots. Humanity may survive this tiny convenience.
-
-## Resume bullets
-
-Use these bullets directly:
-
-- Built a production-style FastAPI backend for a multi-tenant job application CRM using PostgreSQL, SQLAlchemy ORM, Alembic migrations, and Pydantic validation.
-- Implemented JWT authentication, role-based access control, relational schemas, CRUD APIs, filtering, pagination, structured error handling, and pytest-based API tests.
-- Added Redis/Celery background jobs for weekly analytics generation, audit logging for application/referral changes, CSV export, and Docker Compose setup for reproducible local deployment.
-
-## What to explain in interviews
-
-Start with this simple explanation:
-
-> I built a backend CRM for tracking job applications across companies, referrals, interviews, notes, reminders, and application statuses. The project is multi-tenant, so each user belongs to an organization/tenant and can only access their own tenant's data. I used FastAPI for APIs, PostgreSQL with SQLAlchemy for relational modeling, Alembic for migrations, JWT for auth, Redis/Celery for background weekly summaries, and pytest for API tests.
-
-Then explain these points:
-
-1. **Why multi-tenant?** Real SaaS systems separate customer data. Here, `tenant_id` exists on every business table.
-2. **Why SQL relationships?** Companies have jobs, jobs have applications, applications have referrals/interviews/notes/reminders.
-3. **Why audit logs?** Recruiters like seeing production thinking: tracking important changes matters.
-4. **Why Celery?** Long-running or scheduled summary generation should not block API requests.
-5. **Why tests?** Backend claims without tests are just vibes with HTTP endpoints.
-
 ## Common commands
 
 ```bash
@@ -438,17 +407,3 @@ docker compose exec api pytest
 docker compose logs -f api worker
 ```
 
-## Production hardening ideas
-
-Add these later if you want to make it even stronger:
-
-- Refresh tokens
-- Email reminders
-- OpenTelemetry tracing
-- Rate limiting
-- Soft deletes
-- S3 resume upload
-- PostgreSQL full-text search
-- Admin dashboard frontend
-- Row-level security in PostgreSQL
-- Scheduled Celery Beat weekly summary
