@@ -1,0 +1,14 @@
+<svg width="900" height="520" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="520" fill="#f7f7f7"/>
+  <rect x="40" y="40" width="820" height="440" rx="14" fill="white" stroke="#d0d0d0"/>
+  <text x="70" y="90" font-family="Arial" font-size="28" font-weight="bold">Analytics Response Preview</text>
+  <rect x="70" y="125" width="760" height="300" rx="10" fill="#1e1e1e"/>
+  <text x="95" y="165" font-family="monospace" font-size="16" fill="#d4d4d4">{</text>
+  <text x="120" y="195" font-family="monospace" font-size="16" fill="#d4d4d4">"applications_by_status": {"applied": 4, "interview": 2},</text>
+  <text x="120" y="225" font-family="monospace" font-size="16" fill="#d4d4d4">"referral_conversion_rate": 50.0,</text>
+  <text x="120" y="255" font-family="monospace" font-size="16" fill="#d4d4d4">"interviews_per_week": {"2026-W26": 2},</text>
+  <text x="120" y="285" font-family="monospace" font-size="16" fill="#d4d4d4">"top_companies_by_response_rate": [...],</text>
+  <text x="120" y="315" font-family="monospace" font-size="16" fill="#d4d4d4">"totals": {"applications": 7, "referrals": 3, "interviews": 2}</text>
+  <text x="95" y="345" font-family="monospace" font-size="16" fill="#d4d4d4">}</text>
+  <text x="70" y="455" font-family="Arial" font-size="14">Use this endpoint to explain backend aggregation logic during interviews.</text>
+</svg>
